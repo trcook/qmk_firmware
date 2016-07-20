@@ -1,0 +1,1806 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"show",
+				"show_popup_menu"
+			],
+			[
+				"__g",
+				"__getattribute__"
+			],
+			[
+				"sho",
+				"show_popup_menu"
+			],
+			[
+				"my",
+				"MyHtmlCommand"
+			],
+			[
+				"s",
+				"s/	Dir"
+			],
+			[
+				"ca",
+				"caret_extra_width"
+			],
+			[
+				"sub",
+				"sub"
+			],
+			[
+				"v",
+				"v903subjdegree"
+			],
+			[
+				"V1203",
+				"V1203currdegreelm"
+			],
+			[
+				"V1201",
+				"V1201currdegree"
+			],
+			[
+				"V12",
+				"V1202subjdegree"
+			],
+			[
+				"sec",
+				"sec	Section"
+			],
+			[
+				"logit",
+				"logitgraphind"
+			],
+			[
+				"log",
+				"log-likelihood"
+			],
+			[
+				"like",
+				"likelihood"
+			],
+			[
+				"Sec",
+				"section"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "this is a better place to put a good set of keys for typing and testing my typing.",
+			"settings":
+			{
+				"buffer_size": 82,
+				"line_ending": "Unix",
+				"name": "this is a better place to put a good set of keys f"
+			}
+		},
+		{
+			"contents": "][][?>]",
+			"settings":
+			{
+				"buffer_size": 7,
+				"line_ending": "Unix",
+				"name": "][][?>]"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 26484,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/tom/Documents/Boulder/OEF/bringing regions back in/regional_inequality_conflict/codebook.md",
+			"settings":
+			{
+				"buffer_size": 2318,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "this is a typing test page that i can use to type quickly and with some deliberate speed",
+			"settings":
+			{
+				"buffer_size": 88,
+				"line_ending": "Unix",
+				"name": "this is a typing test page that i can use to type"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"aligntab",
+				"AlignTab"
+			],
+			[
+				"align",
+				"AlignTab"
+			],
+			[
+				"mareke",
+				"My Marked: Open current file in Marked"
+			],
+			[
+				"auto",
+				"Auto Wrap: Toggle"
+			],
+			[
+				"alig",
+				"AlignTab"
+			],
+			[
+				"ali",
+				"AlignTab"
+			],
+			[
+				"resour",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"color",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"scope togg",
+				"Scope Hunter: Toggle Instant Scoper"
+			],
+			[
+				"scope",
+				"Scope Hunter: Show Scope Under Cursor(s)"
+			],
+			[
+				"extract",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"themr",
+				"Themr: Toggle Theme Settings"
+			],
+			[
+				"the",
+				"Themr: List themes"
+			],
+			[
+				"themr list",
+				"Themr: List themes"
+			],
+			[
+				"themr ",
+				"Themr: List themes"
+			],
+			[
+				"them",
+				"Themr: List themes"
+			],
+			[
+				"packageu",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"mymark",
+				"My Marked: Open current file in Marked"
+			],
+			[
+				"open res",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"open ",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package resour",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"myr",
+				"my-r-box it"
+			],
+			[
+				"term",
+				"Open in terminal"
+			],
+			[
+				"resource",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"keycon",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"package res",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"color sel",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"colo",
+				"ColorSchemeSelector: Select Color Scheme"
+			],
+			[
+				"colosch",
+				"ColorSchemeSelector: Next Color Scheme"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"new sane",
+				"SaneSnippets: New SaneSnippet..."
+			],
+			[
+				"cheat",
+				"Keymaps: Cheat Sheet"
+			],
+			[
+				"key",
+				"Keymaps: Find a keymap for..."
+			],
+			[
+				"package reso",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"textmate",
+				"textmate: Open current file in Textmate"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"open re",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"open link",
+				"Tasks: Open Link"
+			],
+			[
+				"link",
+				"Tasks: Open Link"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"packagedis",
+				"Package Control: Disable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"disab",
+				"Package Control: Disable Package"
+			],
+			[
+				"keym",
+				"Keymaps: Find a keymap for..."
+			],
+			[
+				"my",
+				"my-r-box it"
+			],
+			[
+				"schemr",
+				"Schemr: List all schemes"
+			],
+			[
+				"sche",
+				"Schemr: List all schemes"
+			],
+			[
+				"rake",
+				"rake build"
+			],
+			[
+				"schem",
+				"Schemr: List all schemes"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"enable",
+				"SublimeLinter: Enable Linting"
+			],
+			[
+				"enable lint",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"lint this",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"lint ",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"syn htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"lint this ",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"save as",
+				"Project: Save As"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"resou",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"mysc",
+				"My Scratch"
+			],
+			[
+				"theme",
+				"Themr: List themes"
+			],
+			[
+				"reso",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"resource ",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"set synreg",
+				"Set Syntax: Regular Expression"
+			],
+			[
+				"myscr",
+				"My Scratch"
+			],
+			[
+				"extra",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"extr",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"res",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"my open",
+				"My Open"
+			],
+			[
+				"convert spa",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"converttabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"replsu",
+				"SublimeREPL: Python - Sublime Text Console"
+			],
+			[
+				"my mark",
+				"My Marked: Open current file in Marked"
+			],
+			[
+				"m",
+				"My html"
+			],
+			[
+				"repl py",
+				"SublimeREPL: Python"
+			],
+			[
+				"adv",
+				":Advanced New File"
+			],
+			[
+				"edit",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"scoper",
+				"Scope Hunter: Toggle Instant Scoper"
+			],
+			[
+				"schemego",
+				"Color Scheme Editor: Goto next matching scope"
+			],
+			[
+				"scheme",
+				"Color Scheme Editor: Edit current color scheme"
+			],
+			[
+				"resourec",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"packageli",
+				"Package Control: List Packages"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"packe",
+				"Package Control: Enable Package"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"upg",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pkupg",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"overw",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"packup",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"paupgr",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"package up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"package upd",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"sch",
+				"Schemr: List all schemes"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"syntax latex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"keymap",
+				"Keymaps: Find a keymap for..."
+			],
+			[
+				"enabl",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable package",
+				"Package Control: Disable Package"
+			],
+			[
+				"exctract",
+				"PackageResourceViewer: Extract Package"
+			],
+			[
+				"keyconfl",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"openre",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"open",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"conflict",
+				"FindKeyConflicts: Overlap Conflicts"
+			],
+			[
+				"oprn re",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"packagere",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"enalint",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"key con",
+				"FindKeyConflicts: Single Package Conflicts"
+			],
+			[
+				"sublkey",
+				"Preferences: SublimeLinter Key Bindings – User"
+			],
+			[
+				"wra",
+				"Word Wrap: Toggle"
+			],
+			[
+				"conflic",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"discov",
+				"Package Control: Discover Packages"
+			],
+			[
+				"openreso",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"toggle",
+				"Scope Hunter: Toggle Instant Scoper"
+			],
+			[
+				"git",
+				"Git: Pull"
+			],
+			[
+				"resourc",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"disable lin",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"lintmo",
+				"SublimeLinter: Choose Lint Mode"
+			]
+		],
+		"width": 475.0
+	},
+	"console":
+	{
+		"height": 206.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"window.run_command('rake')",
+			"dir(sublime)",
+			"dir sublime",
+			"sublime.dir()",
+			"sublime.dir",
+			"dir(Sublilme)",
+			"import sublimeplugin",
+			"import sublime",
+			"import Sublime",
+			"rake",
+			"view.settings().get('syntax')",
+			"view.run_command('example')",
+			"sublime.run_command('example')",
+			"sublime.run_command('my_scratch')",
+			"Sublime.run_command('my_scratch')",
+			"view.run_command('my_scratch')",
+			"view.run_command('my_command')",
+			"view.run_command('example')",
+			"view.run('example')",
+			"view.run_command('example')",
+			"view.run_command('open_in_html_browser')",
+			"view.run_command('example')",
+			"sublime.run_command(open_html_in_browser)",
+			"sublime.run_command()",
+			"Sublime.run_command(open_html_in_Browser)",
+			"import sublime",
+			"import ublime",
+			"import Sublime",
+			"run_command(open_html_in_Browser)",
+			"Sublime.run_command(open_html_in_Browser)",
+			"View.run_command(open_html_in_Browser)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"os.environ['PATH']",
+			"os.environ['PATH']'",
+			"print(os.path)",
+			"print(os.path.dirname(sys.executable))",
+			"import sys, os",
+			"print(os.path.dirname(sys.executable))",
+			"print(os.path.dirname())",
+			"print(os.path)",
+			"print os.path",
+			"system.os.path",
+			"os.shell(lessc)",
+			"os.path",
+			"print(os.path)",
+			"os.path",
+			"import os",
+			"view.settings()",
+			"view.settings(1)",
+			"view.settings()[1]",
+			"dir(view.settings())",
+			"view.settings()",
+			"sublime.view.settings()",
+			"sublime.view.settings",
+			"sublime.settings",
+			"sublime.settings()",
+			"sublime.Settings.get('build','default')",
+			"sublime.Settings.get('build',default)",
+			"sublime.Settings.get('build')",
+			"sublime.Settings.get(self,build)",
+			"sublime.Settings.get()",
+			"dir(sublime.Settings)",
+			"sublime.Settings",
+			"sublime.self.packages",
+			"sublime.packages",
+			"sublime",
+			"Sublime",
+			"import sublime_plugin",
+			"Sublime",
+			"window.packages",
+			"window",
+			"print( 'PATH = ' + os.environ['PATH'])",
+			"import os",
+			"os.environ['PATH'] = '/Users/tom/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/tom/.rvm/gems/ruby-2.0.0-p247@global/bin:/Users/tom/.rvm/rubies/ruby-2.0.0-p247/bin:/Users/tom/.rvm/bin:/Users/tom/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin'",
+			"os.environ['PATH'] = LOCAL",
+			"print( 'PATH = ' + os.environ['PATH'])",
+			"print(os.environ['LOCAL'])",
+			"import os",
+			"import(os)",
+			"print(os.environ['LOCAL'])",
+			"os.environ['LOCAL']",
+			"os.LOCAL",
+			"print(os.environ['PATH'])",
+			"import os",
+			"print(os.environ['PATH'])",
+			"print(os.environ['PATH']",
+			"import os",
+			"print(os.environ['PATH'])",
+			"print(sys.path)",
+			"import os",
+			"import os; os.environ['PATH']",
+			"os.environ",
+			"print(sys.path)",
+			"print(os.path)",
+			"print(os.path.dirname(sys.executable))",
+			"print os.path.dirname(sys.executable)",
+			"import sys, os",
+			"Sublime.path()",
+			"echo $SHELL",
+			"print(sys.path)",
+			"print( 'PATH = ' + os.environ['PATH'])",
+			"import os",
+			"Sublime.sys.path",
+			"shell_cmd('echo $PATH')",
+			"shell_cmd(echo $PATH)",
+			"sys.path",
+			"import sys",
+			"sys.path",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"sys.path",
+			"print sys.path",
+			"import sys",
+			"print sys.path",
+			"os.environ[\"PYTHONPATH\"]",
+			"os.environ['PYTHONPATH']",
+			"os.environ[PYTHONPATH]",
+			"os.environ['PYTHONPATH']",
+			"os.environ['PYTHONPATH'].split(os.pathsep)",
+			"import os",
+			"   import os",
+			"PYTHONPATH",
+			"sys.version_info",
+			"import sys"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/tom/Documents/Programming/qmk_firmware",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/pvc",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/tom",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/tomsplit"
+	],
+	"file_history":
+	[
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/tom/keymap.c",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/default/keymap.c",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/tomsplit/keymap.c",
+		"/Users/tom/Library/Application Support/Karabiner/private.xml",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/tomsplit/config.h",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/tom/config.h",
+		"/Users/tom/Documents/Boulder/Projects/Microfoundations of signaling Legitimacy/Data/survey_round4_preprocessing.R",
+		"/Users/tom/Documents/Programming/qmk_firmware/README.md",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/keymaps/pvc/keymap.c",
+		"/Users/tom/Documents/Programming/qmk_firmware/keyboard/planck/README.md",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/requirements.txt",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/app_module/compute_request_template.json",
+		"/Users/tom/Downloads/Unknown",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/doc/app_module.name_generator.rst",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/doc/app_module.rst",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/GeneralAdmin_Webapp_OAUTH.json",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/setup.cfg",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/doc/index.rst",
+		"/Users/tom/Documents/Boulder/OEF/PROJECT_X/webapp/doc/conf.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Package Control/readme.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/R-Box/README.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Pylinter/Pylinter.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Pylinter/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/my marked/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/boxes/box.py",
+		"/Users/tom/Library/Application Support/Alfred 2/Alfred.alfredpreferences/workflows/user.workflow.678DEA04-44D2-4C1C-8ACC-2D0710313DF2/builtins.json",
+		"/Users/tom/Documents/Boulder/Projects/Dissertation/Data/econ_chapter/inteprolate.py",
+		"/Users/tom/Documents/Boulder/Projects/Dissertation/.gitignore",
+		"/Users/tom/.Rprofile",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Pylinter/pylinter.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/configuration.sublime-project",
+		"/Users/tom/.boxes",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/boxes/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/FindResultsApplyChanges/readme.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/MacTerminal/README.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/MacTerminal/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Installed Packages/PackageResourceViewer.sublime-package",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime.keymap",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/AceJump/README.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/AceJump/Default (OSX).sublime.keymap",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/SublimeOnSaveBuild.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/SublimeOnSaveBuild/README.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/TodoReview/TodoReview.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/snippets/knitrchunk-R.sane-snippet",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/snippets/knitchunk.sane-snippet",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Theme - Centurion/CenturionLight.sublime-theme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Theme - Orchis/Orchis Light.sublime-theme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Theme - Centurion/Galea.tmTheme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Rake/Rake.sublime-build",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/TodoReview/readme.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/snippets/knitchunk1.sane-snippet",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/snippets/compsbase.sane-snippet",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/ra.sublime-snippet",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Installed Packages/SnippetMaker.sublime-package",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Cache/C#/Symbol List Namespace.tmPreferences.cache",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/myscratch/scratch.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/SublimeREPL/run_existing_command.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Rake/rake.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Theme - Centurion/settings.json",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/sublemacspro_custom/Default.sublime-keymap",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/sublemacspro_custom/sbp_kill_ring.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/sublemacspro_custom/sbp.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/sublemacspro_custom/sbp_mark.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Local/Session.sublime_metrics",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/HTML/sublimelinter.version",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Backup/20140513155306/SublimeLinter/messages/SublimeLinter3-update1.txt",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Theme - Afterglow/Afterglow-blue.sublime-theme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Theme - Afterglow/Afterglow.tmTheme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/0_package_control_loader/dependency-metadata.json",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/my color schemes/my_Lucario.tmTheme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Git/README.markdown",
+		"/Users/tom/Google Drive/NCAA/Code/Tom/.bootstrapmaker.py",
+		"/Users/tom/Library/Application Support/Sublime Text 2/Packages/textmateopen/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeX.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/Default (OSX).sublime-keymap",
+		"/Users/tom/Downloads/Boron.tmTheme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/my color schemes/my_Slush & Poppies.tmTheme",
+		"/Users/tom/Downloads/Slush & Poppies.tmTheme",
+		"/Users/tom/Google Drive/NCAA/Code/Tom/rakefile.rb",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/my_quick_scripts/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/my_quick_scripts/textmateopen.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Dictionaries/English (American).dic",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Dictionaries/English (American).aff",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Installed Packages/Dictionaries.sublime-package",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Dictionaries/.gitignore",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/autocompletescroll/Default.sublime-keymap",
+		"/Users/tom/Google Drive/NCAA/Code/Tom/bootstrap.sh",
+		"/Users/tom/Downloads/Slush & Poppies (1).tmTheme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/MacTerminal/open_mac_terminal.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/my marked/openinmarked.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Installed Packages/Theme - Orchis.sublime-package",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/MacTerminal/packages.json",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Backup/20140513155306/SublimeLinter/package_control.json",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/scripts/node_modules/js-beautify/js/lib/unpackers/p_a_c_k_e_r_unpacker.js",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/GitGutter.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/GitGutter/README.md",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/GitGutter/GitGutter.sublime-settings",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Backup/20141024153642/LaTeXTools/LaTeX.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/STProjectMaker/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/PlainTasks/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/myscratch/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/KnitrSublime/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Git/Default.sublime-commands",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Enhanced-R/.no-sublime-package",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/Colorsublime/themes/BoxUK.tmTheme",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/myPATHfix/myPATHfix.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Index/MANIFEST-005028",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/Default (Linux).sublime-keymap",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/EasyMotion/Default (Linux).sublime-keymap",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Installed Packages/Keymaps.sublime-package",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/KnitrSublime/knitr-Markdown.sublime-build",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/LaTeXTools/LaTeX.sublime-build",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Index/LOCK",
+		"/Users/tom/Documents/Programming/wto_python_scrape/exmaple.js",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Rake/python3/__init__.py",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/User/snippets/myrake.sane-snippet",
+		"/Users/tom/Library/Application Support/Sublime Text 3/Packages/Rake/python3/rake.py",
+		"/Users/tom/Documents/Boulder/Work -- DSI/Lesson Plans/01-14/01-14.md",
+		"/Users/tom/Documents/Boulder/2014 Semester 2/Game Theory 2/GT Seminar Paper/abstract.tex",
+		"/Users/tom/Documents/Boulder/2014 Semester 2/Game Theory 2/GT Seminar Paper/ambiguityextension.tex",
+		"/Users/tom/Documents/Boulder/2014 Semester 2/Game Theory 2/GT Seminar Paper/appendix.tex"
+	],
+	"find":
+	{
+		"height": 42.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"KC_LCBR",
+			"KC_LRBC",
+			"\\]",
+			"]",
+			"brakcet",
+			"square bracket",
+			"modifier",
+			"tap",
+			"left",
+			"KC_N",
+			"KC_",
+			"KC\\_N",
+			"mil",
+			"delay",
+			"bothers",
+			"sft_t",
+			"note",
+			"reset",
+			"ruser",
+			"project",
+			"preception",
+			"html",
+			"author",
+			"line",
+			"ruler",
+			"gutter",
+			"#FFF",
+			"FFF",
+			"#FFFFFF",
+			"settings",
+			"ruler",
+			"brackets",
+			"punctuation",
+			"match",
+			"settings",
+			"delete",
+			"total_invest_lean",
+			"data.table",
+			"last_agreement",
+			"a",
+			"flower",
+			"acejump",
+			"boxquote",
+			"rig",
+			"@",
+			"project",
+			"mini",
+			"alt\\+b",
+			"alt\\+f",
+			"alt+f",
+			"word",
+			"alt f",
+			"word",
+			"alt\\+f",
+			"minimap",
+			"sidebar",
+			"scroll",
+			"minimap",
+			"add",
+			"reputation",
+			"my",
+			"my addi",
+			"easymotion",
+			"Invalid",
+			"entity.name.class",
+			"document",
+			"complete",
+			"auto_upgrade",
+			"entity",
+			"(,| )origin:\".+?\"",
+			"short_title:\".+?\"",
+			"title:\".+?\"",
+			"code",
+			"^\\ *\\\\end\\{\\w+?\\}.*%[ |\\t]+class=\"(\\w+?)\".*?",
+			"^\\ *\\\\end\\{\\w+?\\}.*%[ |\\t]+class=\"(\\w+?)\".*?\\n",
+			"^\\ *\\\\begin\\{\\w+?\\}.*%[ |\\t]+class=\"(\\w+?)\".*?\\n",
+			"select",
+			"255",
+			"input",
+			"font",
+			"input",
+			"text_",
+			"text_line",
+			"text ",
+			"text",
+			"panel",
+			"log",
+			"dialog",
+			"tint",
+			"font",
+			"font.bold",
+			"input",
+			"regex",
+			"quick",
+			"findd",
+			"input",
+			"field",
+			"line",
+			"text_line",
+			"input",
+			"-text",
+			"_text",
+			"text ",
+			"text",
+			"209",
+			"163",
+			"209",
+			"208",
+			"163",
+			"selec",
+			"selection",
+			"255",
+			"fff",
+			"text ",
+			"text",
+			"field",
+			"find",
+			"field",
+			"type",
+			"face",
+			"font",
+			"bold",
+			"field",
+			"search",
+			"D1A3D8",
+			"source",
+			"theme",
+			"source"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"total_invest_lean_m",
+			"last_dispute",
+			"origin:\"xxx\"",
+			"short_title:\"Sed ut perspiciatis\"",
+			"title:\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolo\"",
+			"\\\\end{\\1}\\n\n\n",
+			"\\\\begin{\\1}\\n",
+			"\\n\\{\"key\": \\[",
+			"\\n\"dict\"",
+			"$1\",",
+			"ctrl+t"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 82,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 18,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"auto_name": "this is a better place to put a good set of keys f",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6,
+								6
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 7,
+								"count": 0,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"auto_name": "][][?>]",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 26484,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6341,
+								6345
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 3654,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1584.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/tom/Documents/Boulder/OEF/bringing regions back in/regional_inequality_conflict/codebook.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1734,
+								1734
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 200,
+								"modified": false,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"easy_motion_mode": false,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 88,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								88
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": 0,
+								"count": 18,
+								"modified": true,
+								"selection": false,
+								"status": -1,
+								"syntax": "plain text"
+							},
+							"auto_name": "this is a typing test page that i can use to type",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 129.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 104.0
+	},
+	"output.scope_viewer":
+	{
+		"height": 445.0
+	},
+	"output.shell_turtlestein":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Rake/Rake.sublime-build",
+	"project": "planck firmware.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"tomkeymap",
+				"keyboard/planck/keymaps/tom/keymap.c"
+			],
+			[
+				"tomkeymapc",
+				"keyboard/planck/keymaps/tom/keymap.c"
+			],
+			[
+				"defaultkeymap",
+				"keyboard/planck/keymaps/default/keymap.c"
+			],
+			[
+				"tomsplit/.h",
+				"keyboard/planck/keymaps/tomsplit/config.h"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"tomsplitkeymapc",
+				"keyboard/planck/keymaps/tomsplit/keymap.c"
+			],
+			[
+				"tomsplitkeymap.c",
+				"keyboard/planck/keymaps/tomsplit/keymap.c"
+			],
+			[
+				"tomsplitkeymap",
+				"keyboard/planck/keymaps/tomsplit/keymap.c"
+			],
+			[
+				"splitkeymap.c",
+				"keyboard/planck/keymaps/tomsplit/keymap.c"
+			],
+			[
+				"keytomsplit",
+				"keyboard/planck/keymaps/tomsplit/keymap.c"
+			],
+			[
+				"config.sh",
+				"images_for_compute_engine/debian_rstudio_server_config.sh"
+			],
+			[
+				".md",
+				"images_for_compute_engine/rstudio/README.md"
+			],
+			[
+				"compu",
+				"app_module/compute_request_template.json"
+			],
+			[
+				"pylintse",
+				"Packages/Pylinter/Pylinter.sublime-settings"
+			],
+			[
+				"mymarkedco",
+				"Packages/my marked/Default.sublime-commands"
+			],
+			[
+				"sett",
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"usersettings",
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"box",
+				"Packages/boxes/box.py"
+			],
+			[
+				"py",
+				"Packages/Pylinter/Pylinter.sublime-settings"
+			],
+			[
+				"pylin",
+				"Packages/Pylinter/pylinter.py"
+			],
+			[
+				"sublimproj",
+				"Packages/User/configuration.sublime-project"
+			],
+			[
+				"userpref",
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"resourc",
+				"Installed Packages/PackageResourceViewer.sublime-package"
+			],
+			[
+				"configur",
+				"Packages/User/configuration.sublime-project"
+			],
+			[
+				"build",
+				"Packages/Rake/Rake.sublime-build"
+			],
+			[
+				"todore",
+				"Packages/TodoReview/TodoReview.sublime-settings"
+			],
+			[
+				"usersnippetchunk",
+				"Packages/User/snippets/knitchunk.sane-snippet"
+			],
+			[
+				"resour",
+				"Installed Packages/PackageResourceViewer.sublime-package"
+			],
+			[
+				"sublemacskey",
+				"Packages/sublemacspro_custom/Default.sublime-keymap"
+			],
+			[
+				"dictionariesengdic",
+				"Packages/Dictionaries/English (American).dic"
+			],
+			[
+				"latexsublime-comm",
+				"Backup/20141024153642/LaTeXTools/LaTeX.sublime-commands"
+			],
+			[
+				"latexkey",
+				"Packages/LaTeXTools/Default (OSX).sublime-keymap"
+			],
+			[
+				"latex",
+				"Packages/LaTeXTools/LaTeX.sublime-commands"
+			],
+			[
+				"rake",
+				"Packages/Rake/rake.py"
+			],
+			[
+				"untitled",
+				"Packages/User/untitled.sublime-build"
+			],
+			[
+				"myrake",
+				"Packages/User/snippets/myrake.sane-snippet"
+			],
+			[
+				"my_bo",
+				"Packages/my color schemes/my_Boron.tmTheme"
+			],
+			[
+				"lucario",
+				"Packages/Lucario Color Scheme/Lucario.tmTheme"
+			],
+			[
+				"todoreview",
+				"Packages/TodoReview/TodoReview.sublime-settings"
+			],
+			[
+				"mymar",
+				"Packages/my marked/openinmarked.py"
+			],
+			[
+				"luctmtheme",
+				"~/Library/Application Support/Sublime Text 3/Packages/Lucario Color Scheme/Lucario.tmTheme"
+			],
+			[
+				"mymark",
+				"Packages/my marked/openinmarked.py"
+			],
+			[
+				"myh",
+				"Packages/my_quick_scripts/open_in_html.py"
+			],
+			[
+				"scratchcom",
+				"Packages/myscratch/Default.sublime-commands"
+			],
+			[
+				"scr",
+				"Packages/myscratch/scratch.py"
+			],
+			[
+				"build.sh",
+				"Packages/User/build.sh.sublime-build"
+			],
+			[
+				"",
+				"Packages/KnitrSublime/knitr-Markdown.sublime-build"
+			],
+			[
+				"knitbuild",
+				"Packages/KnitrSublime/knitr-Markdown.sublime-build"
+			],
+			[
+				"myscr",
+				"Packages/myscratch/scratch.py"
+			],
+			[
+				"keya",
+				"All Key Mappings"
+			],
+			[
+				"sublemakeym",
+				"Packages/sublemacspro/Default.sublime-keymap"
+			],
+			[
+				"easymo",
+				"Packages/EasyMotion/EasyMotion.sublime-settings"
+			],
+			[
+				"knitrcomm",
+				"Packages/KnitrSublime/Default.sublime-commands"
+			],
+			[
+				"knitr",
+				"Packages/KnitrSublime/knitr-Markdown.sublime-build"
+			],
+			[
+				"sublemacs",
+				"Packages/sublemacspro/sbp_mark.py"
+			],
+			[
+				"autocompl",
+				"Packages/autocompletescroll/Default.sublime-keymap"
+			],
+			[
+				"default/de",
+				"Packages/Default/Default (OSX).sublime-keymap"
+			],
+			[
+				"userdef",
+				"Packages/User/Default (OSX).sublime-keymap"
+			],
+			[
+				"userkeym",
+				"Packages/User/Default (OSX).sublime-keymap"
+			],
+			[
+				"subldefa",
+				"Packages/sublemacspro/Default.sublime-keymap"
+			],
+			[
+				"userdefaultk",
+				"Packages/User/Default (OSX).sublime-keymap"
+			],
+			[
+				"default",
+				"Packages/autocompletescroll/Default.sublime-keymap"
+			],
+			[
+				"userkeymap",
+				"Packages/User/Default (OSX).sublime-keymap"
+			],
+			[
+				"taskstod",
+				"Packages/PlainTasks/messages/Tutorial.todo"
+			],
+			[
+				"todorevread",
+				"Packages/TodoReview/readme.md"
+			],
+			[
+				"userkey",
+				"Packages/User/Default (OSX).sublime-keymap"
+			],
+			[
+				"preferen",
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"pathfi",
+				"Packages/myPATHfix/myPATHfix.py"
+			],
+			[
+				"solari",
+				"Packages/Solarized Color Scheme/Solarized (dark).tmTheme"
+			],
+			[
+				"batman",
+				"Packages/User/Colorsublime/themes/Batman.tmTheme"
+			],
+			[
+				"lintread",
+				"Packages/SublimeLinter/README.md"
+			],
+			[
+				"myp",
+				"Packages/myPATHfix/myPATHfix.py"
+			],
+			[
+				"mypa",
+				"Packages/myPATHfix/myPATHfix.py"
+			],
+			[
+				"fix",
+				"Packages/SublimeFixMacPath/FixPath.py"
+			],
+			[
+				"less2",
+				"Installed Packages/Less2Css.sublime-package"
+			],
+			[
+				"solarizedlight",
+				"Packages/Solarized Color Scheme/Solarized (light).tmTheme"
+			],
+			[
+				"solarlli",
+				"Packages/Solarized Color Scheme/Solarized (dark).tmTheme"
+			],
+			[
+				"solarizeddarksl",
+				"Packages/User/Solarized (dark) (SL).tmTheme"
+			],
+			[
+				"solarized.tmtheme",
+				"Packages/User/Solarized (dark) (SL).tmTheme"
+			],
+			[
+				"solarizedtmtheme",
+				"Packages/User/Solarized (light) (SL).tmTheme"
+			],
+			[
+				"ext",
+				"Installed Packages/Extract Sublime Package.sublime-package"
+			],
+			[
+				"solarized",
+				"Installed Packages/Solarized Color Scheme.sublime-package"
+			],
+			[
+				"easy",
+				"Packages/EasyMotion/EasyMotion.sublime-settings"
+			],
+			[
+				"mact",
+				"Installed Packages/MacTerminal.sublime-package"
+			],
+			[
+				"git.sublime-",
+				"Packages/Git/Git.sublime-settings"
+			],
+			[
+				"git",
+				"Installed Packages/Git.sublime-package"
+			],
+			[
+				"pref",
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"resou",
+				"Installed Packages/PackageResourceViewer.sublime-package"
+			],
+			[
+				"fin",
+				"Installed Packages/FileSystem Autocompletion.sublime-package"
+			],
+			[
+				"userset",
+				"Packages/User/Preferences.sublime-settings"
+			],
+			[
+				"user/key",
+				"Packages/User/Default (OSX).sublime-keymap"
+			],
+			[
+				"banner",
+				"Packages/User/banner.sublime-commands"
+			],
+			[
+				"theory",
+				"Construction/theory.tex"
+			],
+			[
+				"skeleton",
+				"Construction/skeleton.rnw"
+			],
+			[
+				"gci",
+				"Construction/GCIbuild.R"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/configuration.sublime-project"
+			],
+			[
+				"ncaa",
+				"~/Google Drive/NCAA/Code/Tom/ncaa.sublime-project"
+			],
+			[
+				"diss",
+				"~/Documents/Boulder/Projects/Dissertation/dissertation.sublime-project"
+			],
+			[
+				"micro",
+				"~/Documents/Boulder/Projects/Microfoundations of signaling Legitimacy/microfoundations.sublime-project"
+			],
+			[
+				"di",
+				"~/Documents/Boulder/Projects/Dissertation/dissertation.sublime-project"
+			],
+			[
+				"mi",
+				"~/Documents/Boulder/Projects/Microfoundations of signaling Legitimacy/microfoundations.sublime-project"
+			],
+			[
+				"c",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/configuration.sublime-project"
+			],
+			[
+				"confi",
+				"~/Library/Application Support/Sublime Text 3/Packages/User/configuration.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 301.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
