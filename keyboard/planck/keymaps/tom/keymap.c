@@ -11,33 +11,39 @@ extern keymap_config_t keymap_config;
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
-#define _QWERTY 0
-#define _LOWER 3
-#define _RAISE 4
-#define _ADJUST 16
-#define _TOMLAYER 20
-#define _SWAPPER 17  
+
+
+// Define layer names here:
+enum {
+  _QWERTY,
+  _LOWER,
+  _RAISE,
+  _ADJUST,
+  _TOMLAYER,
+  _SWAPPER};
+
 
 // Macro name shortcuts
 #define QWERTY M(_QWERTY)
 #define LOWER M(_LOWER)
 #define RAISE M(_RAISE)
 #define MLAYER MO(_TOMLAYER)
-#define M_BL 5
+//#define M_BL 5
 #define ALFRED LGUI(KC_F1)
 #define TERMINAL LALT(KC_F1)
-#define SWAPPER MO(_SWAPPER)
+// #define SWAPPER MO(_SWAPPER)
 #define PREV_TAB RGUI(S(KC_LBRC))
 #define NEXT_TAB RGUI(S(KC_RBRC))
 #define TAB_IN RGUI(KC_RBRC)
 #define TAB_OUT RGUI(KC_LBRC)
 
 // comment
-  
+
 
 // Fillers to make layering more clear
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
+// Space cadet shift-space
 #define SP_SFT SFT_T(KC_SPC)
 
 
@@ -55,19 +61,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |      | Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
  */
-[_SWAPPER] = {
-{ _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,  KC_BSPC}  ,
-{ _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,_______ },
-{ _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,_______ },
-{ _______ , _______  , _______ , _______ , LT(_LOWER, KC_SPC) , _______ , _______ , LT(_RAISE, KC_SPC) , _______ , _______ , _______ ,_______ }
-}         ,
+// [_SWAPPER] = {
+// { _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,  KC_BSPC}  ,
+// { _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,_______ },
+// { _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ ,_______ },
+// { _______ , _______  , _______ , _______ , LT(LOWER, KC_SPC) , _______ , _______ , LT(RAISE, KC_SPC) , _______ , _______ , _______ ,_______ }
+// }         ,
 
 
 
 /* Qwerty
  * ,-----------------------------------------------------------------------------------.
  * | Tab  |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Bksp |
- * |------+------+------+------+------+-------------+------+------+------+------+------|
+* |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Esc  |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   ;  |  "   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
  * | Shift|   Z  |   X  |   C  |   V  |   B  |   N  |   M  |   ,  |   .  |   /  |Enter |
@@ -80,15 +86,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 { KC_TAB  , KC_Q   , KC_W    , KC_E    , KC_R  , KC_T   , KC_Y   , KC_U  , KC_I    , KC_O    , KC_P    , KC_ENT}  ,
 { KC_LCTL , KC_A   , KC_S    , KC_D    , KC_F  , KC_G   , KC_H   , KC_J  , KC_K    , KC_L    , KC_SCLN , KC_QUOT} ,
 {KC_LSFT   , KC_Z   , KC_X    , KC_C    , KC_V  , KC_B   , KC_N   , KC_M  , KC_COMM , KC_DOT  , KC_SLSH , KC_LALT} ,
-{MLAYER , KC_ESC , KC_BSPC , KC_LGUI , LT(_LOWER, KC_SPC)  , KC_SPC , KC_SPC, LT(_RAISE, KC_SPC) , KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT}
+{LT(_TOMLAYER,KC_ESC) , KC_ESC , KC_BSPC , KC_LGUI , LOWER  , KC_SPC , KC_SPC, RAISE, KC_LEFT , KC_DOWN , KC_UP   , KC_RGHT}
 }   ,
 
-[_TOMLAYER] = {
-{ _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_BSPC} ,
-{ _______ , ALFRED   , _______ , _______ , _______ , _______ , KC_BSPC , _______ , _______ , _______ , _______ , _______} ,
-{ _______ , TERMINAL , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_VOLD , KC_VOLU , _______} ,
-{_______  , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______}
-}         ,
 
 [_LOWER] = {
 {KC_GRV , KC_EXLM , KC_AT   , KC_HASH , KC_DLR  , KC_PERC , KC_CIRC , KC_AMPR    , KC_ASTR    , KC_LPRN , KC_RPRN , KC_BSLS}    ,
@@ -117,6 +117,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 }        ,
 
 
+[_TOMLAYER] = {
+{ _______ , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_BSPC} ,
+{ _______ , ALFRED   , _______ , _______ , _______ , _______ , KC_BSPC , _______ , _______ , _______ , _______ , _______} ,
+{ _______ , TERMINAL , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_VOLD , KC_VOLU , _______} ,
+{_______  , _______  , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______}
+}         ,
 
 /* Adjust (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
@@ -131,7 +137,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_ADJUST] = {
   {_______, RESET,   _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_DEL},
-  {_______, _______, _______, AU_ON,   AU_OFF,  AG_NORM, AG_SWAP, QWERTY,  _______,_______, _______,  _______},
+  {_______, _______, _______, AU_ON,   AU_OFF,  AG_NORM, _______, QWERTY,  _______,_______, _______,  _______},
   {_______, MUV_DE,  MUV_IN,  MU_ON,   MU_OFF,  MI_ON,   MI_OFF,  _______, _______, _______, _______, _______},
   {_______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______}
 }
@@ -181,6 +187,5 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 };
 
 void matrix_init_user(void) {
-  
-}
 
+}
