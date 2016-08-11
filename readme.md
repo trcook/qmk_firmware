@@ -1,46 +1,244 @@
-
 # Quantum Mechanical Keyboard Firmware
 
-This is a keyboard firmware based on the [tmk_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR controllers, and more specifically, the [OLKB product line](http://olkb.co), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, and the [Clueboard product line](http://clueboard.co/).
+[![Build Status](https://travis-ci.org/jackhumbert/qmk_firmware.svg?branch=master)](https://travis-ci.org/jackhumbert/qmk_firmware)
 
-QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, TMK. In fact, this repo used to be a fork of TMK, and we are incredibly grateful for his founding contributions to the firmware. We've had to break the fork due to purely technical reasons -- it simply became too different over time, and we've had to start refactoring some of the basic bits and pieces. We are huge fans of TMK, both the firmware and the person. :)
+This is a keyboard firmware based on the [tmk_keyboard firmware](http://github.com/tmk/tmk_keyboard) with some useful features for Atmel AVR controllers, and more specifically, the [OLKB product line](http://olkb.com), the [ErgoDox EZ](http://www.ergodox-ez.com) keyboard, and the [Clueboard product line](http://clueboard.co/).
+
+## Official website
+
+For an easy-to-read version of this document and the repository, check out [http://qmk.fm](http://qmk.fm). Nicely formatted keyboard and keymap listings are also available there, along with the ability to download .hex files instead of having to setup a build environment and compile them.
+
+## Included Keyboards
+
+* [Planck](/keyboards/planck/)
+* [Preonic](/keyboards/preonic/)
+* [Atomic](/keyboards/atomic/)
+* [ErgoDox EZ](/keyboards/ergodox_ez/)
+* [Clueboard](/keyboards/clueboard/)
+* [Cluepad](/keyboards/cluepad/)
+
+The project also includes community support for [lots of other keyboards](/keyboards/).
+
+## Maintainers
+
+QMK is developed and maintained by Jack Humbert of OLKB with contributions from the community, and of course, [Hasu](https://github.com/tmk). This repo used to be a fork of [TMK](https://github.com/tmk/tmk_keyboard), and we are incredibly grateful for his founding contributions to the firmware. We've had to break the fork due to purely technical reasons - it simply became too different over time, and we've had to start refactoring some of the basic bits and pieces. We are huge fans of TMK and Hasu :)
 
 This documentation is edited and maintained by Erez Zukerman of ErgoDox EZ. If you spot any typos or inaccuracies, please [open an issue](https://github.com/jackhumbert/qmk_firmware/issues/new).
 
-The OLKB product firmwares are maintained by Jack, the Ergodox EZ by Erez, and the Clueboard by [Zach White](https://github.com/skullydazed).
+The OLKB product firmwares are maintained by [Jack Humbert](https://github.com/jackhumbert), the Ergodox EZ by [Erez Zukerman](https://github.com/ezuk), and the Clueboard by [Zach White](https://github.com/skullydazed).
 
-## Important background info: TMK documentation
+## Documentation roadmap
 
-The documentation below explains QMK customizations and elaborates on some of the more useful features of TMK. To understand the base firmware, and especially what *layers* are and how they work, please see [TMK_README.md](/TMK_README.md).
+This is not a tiny project. While this is the main readme, there are many other files you might want to consult. Here are some points of interest:
 
-## Getting started
+* The readme for your own keyboard: This is found under `keyboards/<your keyboards's name>/`. So for the ErgoDox EZ, it's [here](keyboards/ergodox_ez/); for the Planck, it's [here](keyboards/planck/) and so on.
+* The list of possible keycodes you can use in your keymap is actually spread out in a few different places:
+  * [doc/keycode.txt](doc/keycode.txt) - an explanation of those same keycodes.
+  * [quantum/keymap.h](quantum/keymap.h) - this is where the QMK-specific aliases are all set up. Things like the Hyper and Meh key, the Leader key, and all of the other QMK innovations. These are also explained and documented below, but `keymap.h` is where they're actually defined.
+* The [TMK documentation](doc/TMK_README.md). QMK is based on TMK, and this explains how it works internally.
 
-* [BUILD_GUIDE.md](BUILD_GUIDE.md) contains instructions to set up a build environment, build the firmware, and deploy it to a keyboard. Once your build environment has been set up, all `make` commands to actually build the firmware must be run from a folder in `keyboard/`.
-* If you're looking to customize a keyboard that currently runs QMK or TMK, find your keyboard's directory under `keyboard/` and run the make commands from there.
-* If you're looking to apply this firmware to an entirely new hardware project (a new kind of keyboard), you can create your own Quantum-based project by using `./new_project.sh <project_name>`, which will create `/keyboard/<project_name>` with all the necessary components for a Quantum project.
+# Getting started
 
-### Makefile Options
+Before you are able to compile, you'll need to install an environment for AVR development. You'll find the instructions for any OS below. If you find another/better way to set things up from scratch, please consider [making a pull request](https://github.com/jackhumbert/qmk_firmware/pulls) with your changes!
 
-You have access to a bunch of goodies! Check out the Makefile to enable/disable some of the features. Uncomment the `#` to enable them. Setting them to `no` does nothing and will only confuse future you.
+## Build Environment Setup
 
-    BACKLIGHT_ENABLE = yes # Enable keyboard backlight functionality
-    MIDI_ENABLE = yes      # MIDI controls
-    UNICODE_ENABLE = no    # <-- This is how you disable an option, just set it to "no"
-    BLUETOOTH_ENABLE = yes # Enable Bluetooth with the Adafruit EZ-Key HID
+### Windows (Vista and later)
+1. If you have ever installed WinAVR, uninstall it.
+2. Install [MHV AVR Tools](https://infernoembedded.com/sites/default/files/project/MHV_AVR_Tools_20131101.exe). Disable smatch, but **be sure to leave the option to add the tools to the PATH checked**.
+3. Install [MinGW](https://sourceforge.net/projects/mingw/files/Installer/mingw-get-setup.exe/download). During installation, uncheck the option to install a graphical user interface. **DO NOT change the default installation folder.** The scripts depend on the default location.
+4. Clone this repository. [This link will download it as a zip file, which you'll need to extract.](https://github.com/jackhumbert/qmk_firmware/archive/master.zip) Open the extracted folder in Windows Explorer.
+5. Double-click on the 1-setup-path-win batch script to run it. You'll need to accept a User Account Control prompt. Press the spacebar to dismiss the success message in the command prompt that pops up.
+6. Right-click on the 2-setup-environment-win batch script, select "Run as administrator", and accept the User Account Control prompt. This part may take a couple of minutes, and you'll need to approve a driver installation, but once it finishes, your environment is complete!
+7. Future build commands should be run from the MHV AVR Shell, which sets up an environment compatible with colorful build output. The standard Command Prompt will also work, but add `COLOR=false` to the end of all make commands when using it.
+
+### Mac
+If you're using [homebrew,](http://brew.sh/) you can use the following commands:
+
+    brew tap osx-cross/avr
+    brew install avr-libc
+    brew install dfu-programmer
+
+This is the recommended method. If you don't have homebrew, [install it!](http://brew.sh/) It's very much worth it for anyone who works in the command line.
+
+You can also try these instructions:
+
+1. Install Xcode from the App Store.
+2. Install the Command Line Tools from `Xcode->Preferences->Downloads`.
+3. Install [DFU-Programmer][dfu-prog].
+
+### Linux
+Install AVR GCC, AVR libc, and dfu-progammer with your favorite package manager.
+
+Debian/Ubuntu example:
+
+    sudo apt-get update
+    sudo apt-get install gcc-avr avr-libc dfu-programmer
+
+### Docker
+
+If this is a bit complex for you, Docker might be the turn-key solution you need. After installing [Docker](https://www.docker.com/products/docker), run the following command at the root of the QMK folder to build a keyboard/keymap:
+
+```bash
+# You'll run this every time you want to build a keymap
+# modify the keymap and keyboard assigment to compile what you want
+# defaults are ergodox/default
+
+docker run -e keymap=gwen -e keyboard=ergodox --rm -v $('pwd'):/qmk:rw edasque/qmk_firmware
+
+```
+
+This will compile the targetted keyboard/keymap and leave it in your QMK directory for you to flash.
+
+### Vagrant
+If you have any problems building the firmware, you can try using a tool called Vagrant. It will set up a virtual computer with a known configuration that's ready-to-go for firmware building. OLKB does NOT host the files for this virtual computer. Details on how to set up Vagrant are in the [VAGRANT_GUIDE file](doc/VAGRANT_GUIDE.md).
+
+## Verify Your Installation
+1. If you haven't already, obtain this repository ([https://github.com/jackhumbert/qmk_firmware](https://github.com/jackhumbert/qmk_firmware)). You can either download it as a zip file and extract it, or clone it using the command line tool git or the Github Desktop application.
+2. Open up a terminal or command prompt and navigate to the `qmk_firmware` folder using the `cd` command. The command prompt will typically open to your home directory. If, for example, you cloned the repository to your Documents folder, then you would type `cd Documents/qmk_firmware`. If you extracted the file from a zip, then it may be named `qmk_firmware-master` instead.
+3. To confirm that you're in the correct location, you can display the contents of your current folder using the `dir` command on Windows, or the `ls` command on Linux or Mac. You should see several files, including `readme.md` and a `quantum` folder. From here, you need to navigate to the appropriate folder under `keyboards/`. For example, if you're building for a Planck, run `cd keyboards/planck`.
+4. Once you're in the correct keyboard-specific folder, run the `make` command. This should output a lot of information about the build process. More information about the `make` command can be found below.
+
+# Customizing your keymap
+
+In every keymap folder, the following files are recommended:
+
+* `config.h` - the options to configure your keymap
+* `keymap.c` - all of your keymap code, required
+* `Makefile` - the features of QMK that are enabled, required to run `make` in your keymap folder
+* `readme.md` - a description of your keymap, how others might use it, and explanations of features 
+
+## The `make` command
+
+The `make` command is how you compile the firmware into a .hex file, which can be loaded by a dfu programmer (like dfu-progammer via `make dfu`) or the [Teensy loader](https://www.pjrc.com/teensy/loader.html) (only used with Teensys). You can run `make` from the root (`/`), your keyboard folder (`/keyboards/<keyboard>/`), or your keymap folder (`/keyboards/<keyboard>/keymaps/<keymap>/`) if you have a `Makefile` there (see the example [here](/doc/keymap_makefile_example.mk)).
+
+By default, this will generate a `<keyboard>_<keymap>.hex` file in whichever folder you run `make` from. These files are ignored by git, so don't worry about deleting them when committing/creating pull requests.
+
+Below are some definitions that will be useful:
+
+* The "root" (`/`) folder is the qmk_firmware folder, in which are `doc`, `keyboard`, `quantum`, etc.
+* The "keyboard" folder is any keyboard project's folder, like `/keyboards/planck`.
+* The "keymap" folder is any keymap's folder, like `/keyboards/planck/keymaps/default`.
+
+Below is a list of the useful `make` commands in QMK:
+
+* `make` - builds your keyboard and keymap depending on which folder you're in. This defaults to the "default" layout (unless in a keymap folder), and Planck keyboard in the root folder
+  * `make keyboard=<keyboard>` - specifies the keyboard (only to be used in root)
+  * `make keymap=<keymap>` - specifies the keymap (only to be used in root and keyboard folder - not needed when in keymap folder)
+* `make clean` - cleans the `.build` folder, ensuring that everything is re-built
+* `make dfu` - (requires dfu-programmer) builds and flashes the keymap to your keyboard once placed in reset/dfu mode (button or press `KC_RESET`). This does not work for Teensy-based keyboards like the ErgoDox EZ.
+  * `keyboard=` and `keymap=` are compatible with this
+* `make all-keyboards` - builds all keymaps for all keyboards and outputs status of each (use in root)
+* `make all-keyboards-default` - builds all default keymaps for all keyboards and outputs status of each (use in root)
+* `make all-keymaps [keyboard=<keyboard>]` - builds all of the keymaps for whatever keyboard folder you're in, or specified by `<keyboard>`
+* `make all-keyboards-*`, `make all-keyboards-default-*` and `make all-keymaps-* [keyboard=<keyboard>]` - like the normal "make-all-*" commands, but the last string aftter the `-` (for example clean) is passed to the keyboard make command.
+Other, less useful functionality:
+
+* `make COLOR=false` - turns off color output
+* `make SILENT=true` - turns off output besides errors/warnings
+* `make VERBOSE=true` - outputs all of the avr-gcc stuff (not interesting)
+
+## The `Makefile`
+
+There are 3 different `make` and `Makefile` locations:
+
+* root (`/`)
+* keyboard (`/keyboards/<keyboard>/`)
+* keymap (`/keyboards/<keyboard>/keymaps/<keymap>/`)
+
+The root contains the code used to automatically figure out which keymap or keymaps to compile based on your current directory and commandline arguments. It's considered stable, and shouldn't be modified. The keyboard one will contain the MCU set-up and default settings for your keyboard, and shouldn't be modified unless you are the producer of that keyboard. The keymap Makefile can be modified by users, and is optional. It is included automatically if it exists. You can see an example [here](/doc/keymap_makefile_example.mk) - the last few lines are the most important. The settings you set here will override any defaults set in the keyboard Makefile. **It is required if you want to run `make` in the keymap folder.**
+
+### Makefile options
+
+Set the variables to `no` to disable them, and `yes` to enable them.
+
+`BOOTMAGIC_ENABLE`
+
+This allows you to hold a key and the salt key (space by default) and have access to a various EEPROM settings that persist over power loss. It's advised you keep this disabled, as the settings are often changed by accident, and produce confusing results that makes it difficult to debug. It's one of the more common problems encountered in help sessions.
+
+`MOUSEKEY_ENABLE`
+
+This gives you control over cursor movements and clicks via keycodes/custom functions.
+
+`EXTRAKEY_ENABLE`
+
+This allows you to use the system and audio control key codes.
+
+`CONSOLE_ENABLE`
+
+This allows you to print messages that can be read using [`hid_listen`](https://www.pjrc.com/teensy/hid_listen.html). Add this to your `Makefile`, and set it to `yes`. Then put `println`, `printf`, etc. in your keymap or anywhere in the `qmk` source. Finally, open `hid_listen` and enjoy looking at your printed messages.
+
+`COMMAND_ENABLE`
+
+TODO
+
+`SLEEP_LED_ENABLE`
+
+Enables your LED to breath while your computer is sleeping. Timer1 is being used here. This feature is largely unused and untested, and needs updating/abstracting.
+
+`NKRO_ENABLE`
+
+This allows for n-key rollover (default is 6) to be enabled. It is off by default, but can be forced by adding `#define FORCE_NKRO` to your config.h.
+
+`BACKLIGHT_ENABLE`
+
+This enables your backlight on Timer1 and ports B5, B6, or B7 (for now). You can specify your port by putting this in your `config.h`:
+
+    #define BACKLIGHT_PIN B7
+
+`MIDI_ENABLE`
+
+This enables MIDI sending and receiving with your keyboard. To enter MIDI send mode, you can use the keycode `MI_ON`, and `MI_OFF` to turn it off. This is a largely untested feature, but more information can be found in the `quantum/quantum.c` file.
+
+`UNICODE_ENABLE`
+
+This allows you to send unicode symbols via `UC(<unicode>)` in your keymap. Only codes up to 0x7FFF are currently supported.
+
+`BLUETOOTH_ENABLE`
+
+This allows you to interface with a Bluefruit EZ-key to send keycodes wirelessly. It uses the D2 and D3 pins.
+
+`AUDIO_ENABLE`
+
+This allows you output audio on the C6 pin (needs abstracting). See the [audio section](#driving-a-speaker---audio-support) for more information.
 
 ### Customizing Makefile options on a per-keymap basis
 
-If your keymap directory has a file called `makefile.mk` (note the lowercase filename, and the `.mk` extension), any Makefile options you set in that file will take precedence over other Makefile options (those set for Quantum as a whole or for your particular keyboard).
+If your keymap directory has a file called `Makefile` (note the filename), any Makefile options you set in that file will take precedence over other Makefile options for your particular keyboard.
 
-So let's say your keyboard's makefile has `CONSOLE_ENABLE = yes` (or maybe doesn't even list the `CONSOLE_ENABLE` option, which would cause it to revert to the global Quantum default). You want your particular keymap to not have the debug console, so you make a file called `makefile.mk` and specify `CONSOLE_ENABLE = no`.
+So let's say your keyboard's makefile has `BACKLIGHT_ENABLE = yes` (or maybe doesn't even list the `BACKLIGHT_ENABLE` option, which would cause it to be off). You want your particular keymap to not have the debug console, so you make a file called `Makefile` and specify `BACKLIGHT_ENABLE = no`.
 
-### Customizing config.h on a per-keymap basis
+You can use the `doc/keymap_makefile_example.md` as a template/starting point.
 
-If you use the ErgoDox EZ, you can make a `config_user.h` file in your keymap directory and use it to override any `config.h` settings you don't like. Anything you set there will take precedence over the global `config.h` for the ErgoDox EZ. To see an example of this, check out `keymaps/erez_experimental`.
+## The `config.h` file
+
+There are 2 `config.h` locations:
+
+* keyboard (`/keyboards/<keyboard>/`)
+* keymap (`/keyboards/<keyboard>/keymaps/<keymap>/`)
+
+The keyboard `config.h` is included only if the keymap one doesn't exist. The format to use for your custom one [is here](/doc/keymap_config_h_example.h). If you want to override a setting from the parent `config.h` file, you need to do this:
+
+```c
+#undef MY_SETTING
+#define MY_SETTING 4
+```
+
+For a value of `4` for this imaginary setting. So we `undef` it first, then `define` it.
+
+You can then override any settings, rather than having to copy and paste the whole thing.
+
+# Going beyond the keycodes
+
+Aside from the [basic keycodes](doc/keycode.txt), your keymap can include shortcuts to common operations.
 
 ## Quick aliases to common actions
 
 Your keymap can include shortcuts to common operations (called "function actions" in tmk).
+
+These functions work the same way that their `ACTION_*` functions do - they're just quick aliases. To dig into all of the tmk `ACTION_*` functions, please see the [TMK documentation](https://github.com/jackhumbert/qmk_firmware/blob/master/doc/keymap.md#2-action).
+
+Instead of using `FNx` when defining `ACTION_*` functions, you can use `F(x)` - the benefit here is being able to use more than 32 function actions (up to 4096), if you happen to need them.
 
 ### Switching and toggling layers
 
@@ -86,6 +284,7 @@ The following shortcuts automatically add `LSFT()` to keycodes to get commonly u
     KC_RPRN  )
     KC_UNDS  _
     KC_PLUS  +
+    KC_DQUO  "
     KC_LCBR  {
     KC_RCBR  }
     KC_LABK  <
@@ -106,7 +305,6 @@ These are the values you can use for the `mod` in `MT()` and `OSM()` (right-hand
   * MOD_HYPR
   * MOD_MEH
 
-
 These can also be combined like `MOD_LCTL | MOD_LSFT` e.g. `MT(MOD_LCTL | MOD_LSFT, KC_ESC)` which would activate Control and Shift when held, and send Escape when tapped.
 
 We've added shortcuts to make common modifier/tap (mod-tap) mappings more compact:
@@ -119,11 +317,219 @@ We've added shortcuts to make common modifier/tap (mod-tap) mappings more compac
   * `LCAG_T(kc)` - is CtrlAltGui when held and *kc* when tapped
   * `MEH_T(kc)` - is like Hyper, but not as cool -- does not include the Cmd/Win key, so just sends Alt+Ctrl+Shift.
 
-### Temporarily setting the default layer
+## Space Cadet Shift: The future, built in
+
+Steve Losh [described](http://stevelosh.com/blog/2012/10/a-modern-space-cadet/) the Space Cadet Shift quite well. Essentially, you hit the left Shift on its own, and you get an opening parenthesis; hit the right Shift on its own, and you get the closing one. When hit with other keys, the Shift key keeps working as it always does. Yes, it's as cool as it sounds.
+
+To use it, use `KC_LSPO` (Left Shift, Parens Open) for your left Shift on your keymap, and `KC_RSPC` (Right Shift, Parens Close) for your right Shift. 
+
+It's defaulted to work on US keyboards, but if your layout uses different keys for parenthesis, you can define those in your `config.h` like this:
+
+    #define LSPO_KEY KC_9
+    #define RSPC_KEY KC_0
+
+You can also choose between different rollover behaviors of the shift keys by defining:
+
+    #define DISABLE_SPACE_CADET_ROLLOVER
+
+in your `config.h`. Disabling rollover allows you to use the opposite shift key to cancel the space cadet state in the event of an erroneous press instead of emitting a pair of parentheses when the keys are released.
+
+The only other thing you're going to want to do is create a `Makefile` in your keymap directory and set the following:
+
+```
+COMMAND_ENABLE   = no  # Commands for debug and configuration
+```
+
+This is just to keep the keyboard from going into command mode when you hold both Shift keys at the same time.
+
+## The Leader key: A new kind of modifier
+
+If you've ever used Vim, you know what a Leader key is. If not, you're about to discover a wonderful concept. :) Instead of hitting Alt+Shift+W for example (holding down three keys at the same time), what if you could hit a _sequence_ of keys instead? So you'd hit our special modifier (the Leader key), followed by W and then C (just a rapid succession of keys), and something would happen.
+
+That's what `KC_LEAD` does. Here's an example:
+
+1. Pick a key on your keyboard you want to use as the Leader key. Assign it the keycode `KC_LEAD`. This key would be dedicated just for this -- it's a single action key, can't be used for anything else.
+2. Include the line `#define LEADER_TIMEOUT 300` somewhere in your keymap.c file, probably near the top. The 300 there is 300ms -- that's how long you have for the sequence of keys following the leader. You can tweak this value for comfort, of course.
+3. Within your `matrix_scan_user` function, do something like this:
+
+```
+LEADER_EXTERNS();
+
+void matrix_scan_user(void) {
+  LEADER_DICTIONARY() {
+    leading = false;
+    leader_end();
+
+    SEQ_ONE_KEY(KC_F) {
+      register_code(KC_S);
+      unregister_code(KC_S);
+    }
+    SEQ_TWO_KEYS(KC_A, KC_S) {
+      register_code(KC_H);
+      unregister_code(KC_H);
+    }
+    SEQ_THREE_KEYS(KC_A, KC_S, KC_D) {
+      register_code(KC_LGUI);
+      register_code(KC_S);
+      unregister_code(KC_S);
+      unregister_code(KC_LGUI);
+    }
+  }
+}
+```
+
+As you can see, you have three function. you can use - `SEQ_ONE_KEY` for single-key sequences (Leader followed by just one key), and `SEQ_TWO_KEYS` and `SEQ_THREE_KEYS` for longer sequences. Each of these accepts one or more keycodes as arguments. This is an important point: You can use keycodes from **any layer on your keyboard**. That layer would need to be active for the leader macro to fire, obviously.
+
+## Tap Dance: A single key can do 3, 5, or 100 different things
+
+Hit the semicolon key once, send a semicolon. Hit it twice, rapidly -- send a colon. Hit it three times, and your keyboard's LEDs do a wild dance. That's just one example of what Tap Dance can do. It's one of the nicest community-contributed features in the firmware, conceived and created by [algernon](https://github.com/algernon) in [#451](https://github.com/jackhumbert/qmk_firmware/pull/451). Here's how algernon describes the feature:
+
+With this feature one can specify keys that behave differently, based on the amount of times they have been tapped, and when interrupted, they get handled before the interrupter.
+
+To make it clear how this is different from `ACTION_FUNCTION_TAP`, lets explore a certain setup! We want one key to send `Space` on single tap, but `Enter` on double-tap.
+
+With `ACTION_FUNCTION_TAP`, it is quite a rain-dance to set this up, and has the problem that when the sequence is interrupted, the interrupting key will be send first. Thus, `SPC a` will result in `a SPC` being sent, if they are typed within `TAPPING_TERM`. With the tap dance feature, that'll come out as `SPC a`, correctly.
+
+The implementation hooks into two parts of the system, to achieve this: into `process_record_quantum()`, and the matrix scan. We need the latter to be able to time out a tap sequence even when a key is not being pressed, so `SPC` alone will time out and register after `TAPPING_TERM` time.
+
+But lets start with how to use it, first!
+
+First, you will need `TAP_DANCE_ENABLE=yes` in your `Makefile`, because the feature is disabled by default. This adds a little less than 1k to the firmware size. Next, you will want to define some tap-dance keys, which is easiest to do with the `TD()` macro, that - similar to `F()`, takes a number, which will later be used as an index into the `tap_dance_actions` array.
+
+This array specifies what actions shall be taken when a tap-dance key is in action. Currently, there are three possible options:
+
+* `ACTION_TAP_DANCE_DOUBLE(kc1, kc2)`: Sends the `kc1` keycode when tapped once, `kc2` otherwise. When the key is held, the appropriate keycode is registered: `kc1` when pressed and held, `kc2` when tapped once, then pressed and held.
+* `ACTION_TAP_DANCE_FN(fn)`: Calls the specified function - defined in the user keymap - with the final tap count of the tap dance action.
+* `ACTION_TAP_DANCE_FN_ADVANCED(on_each_tap_fn, on_dance_finished_fn, on_reset_fn)`: Calls the first specified function - defined in the user keymap - on every tap, the second function on when the dance action finishes (like the previous option), and the last function when the tap dance action resets.
+
+The first option is enough for a lot of cases, that just want dual roles. For example, `ACTION_TAP_DANCE(KC_SPC, KC_ENT)` will result in `Space` being sent on single-tap, `Enter` otherwise.
+
+And that's the bulk of it!
+
+And now, on to the explanation of how it works!
+
+The main entry point is `process_tap_dance()`, called from `process_record_quantum()`, which is run for every keypress, and our handler gets to run early. This function checks whether the key pressed is a tap-dance key. If it is not, and a tap-dance was in action, we handle that first, and enqueue the newly pressed key. If it is a tap-dance key, then we check if it is the same as the already active one (if there's one active, that is). If it is not, we fire off the old one first, then register the new one. If it was the same, we increment the counter and the timer.
+
+This means that you have `TAPPING_TERM` time to tap the key again, you do not have to input all the taps within that timeframe. This allows for longer tap counts, with minimal impact on responsiveness.
+
+Our next stop is `matrix_scan_tap_dance()`. This handles the timeout of tap-dance keys.
+
+For the sake of flexibility, tap-dance actions can be either a pair of keycodes, or a user function. The latter allows one to handle higher tap counts, or do extra things, like blink the LEDs, fiddle with the backlighting, and so on. This is accomplished by using an union, and some clever macros.
+
+### Examples
+
+Here's a simple example for a single definition: 
+
+1. In your `makefile`, add `TAP_DANCE_ENABLE = yes`
+2. In your `config.h` (which you can copy from `qmk_firmware/keyboards/planck/config.h` to your keymap directory), add `#define TAPPING_TERM 200`
+3. In your `keymap.c` file, define the variables and definitions, then add to your keymap: 
+
+```c
+//Tap Dance Declarations
+enum {
+  TD_ESC_CAPS = 0
+};
+
+//Tap Dance Definitions
+const qk_tap_dance_action_t tap_dance_actions[] = {
+  //Tap once for Esc, twice for Caps Lock
+  [TD_ESC_CAPS]  = ACTION_TAP_DANCE_DOUBLE(KC_ESC, KC_CAPS)
+// Other declarations would go here, separated by commas, if you have them
+};
+
+//In Layer declaration, add tap dance item in place of a key code
+TD(TD_ESC_CAPS) 
+```
+
+Here's a more complex example involving custom actions: 
+
+```c
+enum {
+ CT_SE = 0,
+ CT_CLN,
+ CT_EGG,
+ CT_FLSH,
+};
+
+/* Have the above three on the keymap, TD(CT_SE), etc... */
+
+void dance_cln_finished (qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    register_code (KC_RSFT);
+    register_code (KC_SCLN);
+  } else {
+    register_code (KC_SCLN);
+  }
+}
+
+void dance_cln_reset (qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count == 1) {
+    unregister_code (KC_RSFT);
+    unregister_code (KC_SCLN);
+  } else {
+    unregister_code (KC_SCLN);
+  }
+}
+
+void dance_egg (qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count >= 100) {
+    SEND_STRING ("Safety dance!");
+    reset_tap_dance (state);
+  }
+}
+
+// on each tap, light up one led, from right to left
+// on the forth tap, turn them off from right to left
+void dance_flsh_each(qk_tap_dance_state_t *state, void *user_data) {
+  switch (state->count) {
+  case 1:
+    ergodox_right_led_3_on();
+    break;
+  case 2:
+    ergodox_right_led_2_on();
+    break;
+  case 3:
+    ergodox_right_led_1_on();
+    break;
+  case 4:
+    ergodox_right_led_3_off();
+    _delay_ms(50);
+    ergodox_right_led_2_off();
+    _delay_ms(50);
+    ergodox_right_led_1_off();
+  }
+}
+
+// on the fourth tap, set the keyboard on flash state
+void dance_flsh_finished(qk_tap_dance_state_t *state, void *user_data) {
+  if (state->count >= 4) {
+    reset_keyboard();
+    reset_tap_dance(state);
+  }
+}
+
+// if the flash state didnt happen, then turn off leds, left to right
+void dance_flsh_reset(qk_tap_dance_state_t *state, void *user_data) {
+  ergodox_right_led_1_off();
+  _delay_ms(50);
+  ergodox_right_led_2_off();
+  _delay_ms(50);
+  ergodox_right_led_3_off();
+}
+
+const qk_tap_dance_action_t tap_dance_actions[] = {
+  [CT_SE]  = ACTION_TAP_DANCE_DOUBLE (KC_SPC, KC_ENT)
+ ,[CT_CLN] = ACTION_TAP_DANCE_FN_ADVANCED (NULL, dance_cln_finished, dance_cln_reset)
+ ,[CT_EGG] = ACTION_TAP_DANCE_FN (dance_egg)
+ ,[CT_FLSH] = ACTION_TAP_DANCE_FN_ADVANCED (dance_flsh_each, dance_flsh_finished, dance_flsh_reset)
+};
+```
+
+## Temporarily setting the default layer
 
 `DF(layer)` - sets default layer to *layer*. The default layer is the one at the "bottom" of the layer stack - the ultimate fallback layer. This currently does not persist over power loss. When you plug the keyboard back in, layer 0 will always be the default. It is theoretically possible to work around that, but that's not what `DF` does.
 
-### Prevent stuck modifiers
+## Prevent stuck modifiers
 
 Consider the following scenario:
 
@@ -143,12 +549,6 @@ If such situation bothers you add this to your `config.h`:
 This option uses 5 bytes of memory per every 8 keys on the keyboard
 rounded up (5 bits per key). For example on Planck (48 keys) it uses
 (48/8)\*5 = 30 bytes.
-
-### Remember: These are just aliases
-
-These functions work the same way that their `ACTION_*` functions do - they're just quick aliases. To dig into all of the tmk ACTION_* functions, please see the [TMK documentation](https://github.com/jackhumbert/qmk_firmware/blob/master/tmk_core/doc/keymap.md#2-action).
-
-Instead of using `FNx` when defining `ACTION_*` functions, you can use `F(x)` - the benefit here is being able to use more than 32 function actions (up to 4096), if you happen to need them.
 
 ## Macro shortcuts: Send a whole string when pressing just one key
 
@@ -243,7 +643,7 @@ If you have a bunch of macros you want to refer to from your keymap, while keepi
 #define EXT_PLV M(13)
 ```
 
-As was done on the [Planck default keymap](/keyboard/planck/keymaps/default/keymap.c#L33-L40)
+As was done on the [Planck default keymap](/keyboards/planck/keymaps/default/keymap.c#L33-L40)
 
 #### Timer functionality
 
@@ -259,9 +659,9 @@ if (timer_elapsed(key_timer) < 100) {
 }
 ```
 
-It's best to declare the `static uint16_t key_timer;` outside of the macro block (top of file, etc). 
+It's best to declare the `static uint16_t key_timer;` outside of the macro block (top of file, etc).
 
-#### Example 1: Single-key copy/paste (hold to copy, tap to paste)
+#### Example: Single-key copy/paste (hold to copy, tap to paste)
 
 With QMK, it's easy to make one key do two things, as long as one of those things is being a modifier. :) So if you want a key to act as Ctrl when held and send the letter R when tapped, that's easy: `CTL_T(KC_R)`. But what do you do when you want that key to send Ctrl-V (paste) when tapped, and Ctrl-C (copy) when held?
 
@@ -277,7 +677,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
         case 0: {
             if (record->event.pressed) {
                 key_timer = timer_read(); // if the key is being pressed, we start the timer.
-            } 
+            }
             else { // this means the key was just released, so we can figure out how long it was pressed for (tap or "held down").
                 if (timer_elapsed(key_timer) > 150) { // 150 being 150ms, the threshhold we pick for counting something as a tap.
                     return MACRO( D(LCTL), T(C), U(LCTL), END  );
@@ -294,52 +694,6 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 ```
 
 And then, to assign this macro to a key on your keyboard layout, you just use `M(0)` on the key you want to press for copy/paste.
-
-#### Example 2: Space Cadet Shift (making it easy to send opening and closing parentheses)
-
-In the [Modern Space Cadet Keyboard](http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#shift-parentheses), one of cooler features is the Shift Parentheses. To quote Steve Losh:
-
-  > When held while pressing other keys, act like Shift.
-  > When pressed and released on their own, type an opening or closing parenthesis (left and right shift respectively).
-
-```
-static uint16_t key_timer;
-
-const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
-{
-      switch(id) {
-        case 0: {
-            if (record->event.pressed) {
-                key_timer = timer_read(); // if the key is being pressed, we start the timer.
-                register_code(KC_LSFT); // we're now holding down Shift.
-            } else { // this means the key was just released, so we can figure out how long it was pressed for (tap or "held down").
-                if (timer_elapsed(key_timer) < 150) { // 150 being 150ms, the threshhold we pick for counting something as a tap. 
-                    register_code(KC_9); // sending 9 while Shift is held down gives us an opening paren
-                    unregister_code(KC_9); // now let's let go of that key
-                }
-                unregister_code(KC_LSFT); // let's release the Shift key now.
-            }
-            break;
-        }
-        case 1: {
-            if (record->event.pressed) {
-                key_timer = timer_read(); // Now we're doing the same thing, only for the right shift/close paren key
-                register_code(KC_RSFT); 
-            } else { 
-                if (timer_elapsed(key_timer) < 150) { 
-                    register_code(KC_0); 
-                    unregister_code(KC_0); 
-                }
-                unregister_code(KC_RSFT); 
-            }
-            break;
-        }
-      }
-    return MACRO_NONE;
-};
-```
-
-And then, to assign this macro to a key on your keyboard layout, you just use `M(0)` on the key you want to press for left shift/opening parens, and `M(1)` for right shift/closing parens.
 
 ## Additional keycode aliases for software-implemented layouts (Colemak, Dvorak, etc)
 
@@ -378,11 +732,62 @@ You can currently send 4 hex digits with your OS-specific modifier key (RALT for
 
 Enable the backlight from the Makefile.
 
-## Driving a speaker - audio support
+# Custom Quantum functions
 
-Your keyboard can make sounds! If you've got a Planck, Preonic, or basically any keyboard that allows access to the C6 port, you can hook up a simple speaker and have it beep. You can use those beeps to indicate layer transitions, modifiers, special keys, or just to play some funky 8bit tunes.
+All of these functions are available in the `*_kb()` or `*_user()` variety. `kb` ones should only be used in the `<keyboard>/<keyboard>.c` file, and `user` ones should only be used in the `keymap.c`. The keyboard ones call the user ones - it's necessary to keep these calls to allow the keymap functions to work correctly.
 
-The audio code lives in [quantum/audio/audio.h](/quantum/audio/audio.h) and in the other files in the audio directory. It's enabled by default on the Planck [stock keymap](/keyboard/planck/keymaps/default/keymap.c). Here are the important bits:
+## `void matrix_init_*(void)`
+
+This function gets called when the matrix is initiated, and can contain start-up code for your keyboard/keymap.
+
+## `void matrix_scan_*(void)`
+
+This function gets called at every matrix scan, which is basically as often as the MCU can handle. Be careful what you put here, as it will get run a lot.
+
+## `bool process_record_*(uint16_t keycode, keyrecord_t *record)`
+
+This function gets called on every keypress/release, and is where you can define custom functionality. The return value is whether or not QMK should continue processing the keycode - returning `false` stops the execution.
+
+The `keycode` variable is whatever is defined in your keymap, eg `MO(1)`, `KC_L`, etc. and can be switch-cased to execute code whenever a particular code is pressed.
+
+The `record` variable contains infomation about the actual press:
+
+```
+keyrecord_t record {
+  keyevent_t event {
+    keypos_t key {
+      uint8_t col
+      uint8_t row
+    }
+    bool     pressed
+    uint16_t time
+  }
+}
+```
+
+The conditional `if (record->event.pressed)` can tell if the key is being pressed or released, and you can execute code based on that.
+
+## `void led_set_*(uint8_t usb_led)`
+
+This gets called whenever there is a state change on your host LEDs (eg caps lock, scroll lock, etc). The LEDs are defined as:
+
+```
+#define USB_LED_NUM_LOCK                0
+#define USB_LED_CAPS_LOCK               1
+#define USB_LED_SCROLL_LOCK             2
+#define USB_LED_COMPOSE                 3
+#define USB_LED_KANA                    4
+```
+
+and can be tested against the `usb_led` with a conditional like `if (usb_led & (1<<USB_LED_CAPS_LOCK))` - if this is true, you can turn your LED one, otherwise turn it off.
+
+# Modding your keyboard
+
+## Audio output from a speaker
+
+Your keyboard can make sounds! If you've got a Planck, Preonic, or basically any keyboard that allows access to the C6 port, you can hook up a simple speaker and make it beep. You can use those beeps to indicate layer transitions, modifiers, special keys, or just to play some funky 8bit tunes.
+
+The audio code lives in [quantum/audio/audio.h](/quantum/audio/audio.h) and in the other files in the audio directory. It's enabled by default on the Planck [stock keymap](/keyboards/planck/keymaps/default/keymap.c). Here are the important bits:
 
 ```
 #include "audio.h"
@@ -415,7 +820,7 @@ float music_scale[][2] = SONG(MUSIC_SCALE_SOUND);
 float goodbye[][2] = SONG(GOODBYE_SOUND);
 ```
 
-Wherein we bind predefined songs (from [audio/song_list.h](/audio/song_list.h)) into named variables. This is one optimization that helps save on memory: These songs only take up memory when you reference them in your keymap, because they're essentially all preprocessor directives.
+Wherein we bind predefined songs (from [quantum/audio/song_list.h](/quantum/audio/song_list.h)) into named variables. This is one optimization that helps save on memory: These songs only take up memory when you reference them in your keymap, because they're essentially all preprocessor directives.
 
 So now you have something called `tone_plover` for example. How do you make it play the Plover tune, then? If you look further down the keymap, you'll see this:
 
@@ -426,6 +831,17 @@ PLAY_NOTE_ARRAY(tone_plover, false, 0); // Signature is: Song name, repeat, rest
 This is inside one of the macros. So when that macro executes, your keyboard plays that particular chime.
 
 "Rest style" in the method signature above (the last parameter) specifies if there's a rest (a moment of silence) between the notes.
+
+
+## Recording And Playing back Music
+* ```Music On``` - Turn music mode on. The default mapping is ```Lower+Upper+C```
+* ```LCTL``` - start a recording
+* play some tones
+* ```LALT``` - stop recording, stop playing
+* ```LGUI``` - play recording
+* ```LALT``` - stop playing
+* ```Music Off``` - Turn music mode off. The default mapping is ```Lower+Upper+V```
+
 
 ## MIDI functionalty
 
@@ -457,7 +873,7 @@ AutoHotkey inserts the Text right of `Send, ` when this combination is pressed.
 
 ## RGB Under Glow Mod
 
-![Planck with RGB Underglow](https://raw.githubusercontent.com/yangliu/qmk_firmware/planck-rgb/keyboard/planck/keymaps/yang/planck-with-rgb-underglow.jpg)
+![Planck with RGB Underglow](https://raw.githubusercontent.com/jackhumbert/qmk_firmware/master/keyboards/planck/keymaps/yang/planck-with-rgb-underglow.jpg)
 
 Here is a quick demo on Youtube (with NPKC KC60) (https://www.youtube.com/watch?v=VKrpPAHlisY).
 
@@ -465,29 +881,24 @@ For this mod, you need an unused pin wiring to DI of WS2812 strip. After wiring 
 
     RGBLIGHT_ENABLE = yes
 
-Please note that the underglow is not compatible with audio output. So you cannot enable both of them at the same time.
+In order to use the underglow timer functions, you need to have `#define RGBLIGHT_TIMER` in your `config.h`, and have audio disabled (`AUDIO_ENABLE = no` in your Makefile).
 
-Please add the following options into your config.h, and set them up according your hardware configuration. These settings are for the F4 by default:
-
-    #define ws2812_PORTREG  PORTF
-    #define ws2812_DDRREG   DDRF
-    #define ws2812_pin PF4
+Please add the following options into your config.h, and set them up according your hardware configuration. These settings are for the `F4` pin by default:
+    
+    #define RGB_DI_PIN F4     // The pin your RGB strip is wired to
+    #define RGBLIGHT_TIMER    // Require for fancier stuff (not compatible with audio)
     #define RGBLED_NUM 14     // Number of LEDs
     #define RGBLIGHT_HUE_STEP 10
     #define RGBLIGHT_SAT_STEP 17
     #define RGBLIGHT_VAL_STEP 17
 
-You'll need to edit `PORTF`, `DDRF`, and `PF4` on the first three lines to the port/pin you have your LED(s) wired to, eg for B3 change things to:
+You'll need to edit `RGB_DI_PIN` to the pin you have your `DI` on your RGB strip wired to.
 
-    #define ws2812_PORTREG  PORTB
-    #define ws2812_DDRREG   DDRB
-    #define ws2812_pin PB3
-
-The firmware supports 5 different light effects, and the color (hue, saturation, brightness) can be customized in most effects. To control the underglow, you need to modify your keymap file to assign those functions to some keys/key combinations. For details, please check this keymap. `keyboard/planck/keymaps/yang/keymap.c`
+The firmware supports 5 different light effects, and the color (hue, saturation, brightness) can be customized in most effects. To control the underglow, you need to modify your keymap file to assign those functions to some keys/key combinations. For details, please check this keymap. `keyboards/planck/keymaps/yang/keymap.c`
 
 ### WS2812 Wiring
 
-![WS2812 Wiring](https://raw.githubusercontent.com/yangliu/qmk_firmware/planck-rgb/keyboard/planck/keymaps/yang/WS2812-wiring.jpg)
+![WS2812 Wiring](https://raw.githubusercontent.com/jackhumbert/qmk_firmware/master/keyboards/planck/keymaps/yang/WS2812-wiring.jpg)
 
 Please note the USB port can only supply a limited amount of power to the keyboard (500mA by standard, however, modern computer and most usb hubs can provide 700+mA.). According to the data of NeoPixel from Adafruit, 30 WS2812 LEDs require a 5V 1A power supply, LEDs used in this mod should not more than 20.
 
@@ -511,4 +922,64 @@ what things are (and likely aren't) too risky.
 - EEPROM has around a 100000 write cycle.  You shouldn't rewrite the
   firmware repeatedly and continually; that'll burn the EEPROM
   eventually.
-					
+
+# Porting your keyboard to QMK
+
+If your keyboard is running an Atmega chip (atmega32u4 and others), it's pretty easy to get things setup for compiling your own firmware to flash onto your board. There is a `/util/new_project.sh <keyboard>` script to help get you started - you can simply pass your keyboard's name into the script, and all of the necessary files will be created. The components of each are described below.
+
+## `/keyboards/<keyboard>/config.h`
+
+The `USB Device descriptor parameter` block contains parameters are used to uniquely identify your keyboard, but they don't really matter to the machine.
+
+Your `MATRIX_ROWS` and `MATRIX_COLS` are the numbers of rows and cols in your keyboard matrix - this may be different than the number of actual rows and columns on your keyboard. There are some tricks you can pull to increase the number of keys in a given matrix, but most keyboards are pretty straight-forward. 
+
+The `MATRIX_ROW_PINS` and `MATRIX_COL_PINS` are the pins your MCU uses on each row/column. Your schematic (if you have one) will have this information on it, and the values will vary depending on your setup. This is one of the most important things to double-check in getting your keyboard setup correctly.
+
+For the `DIODE_DIRECTION`, most hand-wiring guides will instruct you to wire the diodes in the `COL2ROW` position, but it's possible that they are in the other - people coming from EasyAVR often use `ROW2COL`. Nothing will function if this is incorrect.
+
+`BACKLIGHT_PIN` is the pin that your PWM-controlled backlight (if one exists) is hooked-up to. Currently only B5, B6, and B7 are supported. 
+
+`BACKLIGHT_BREATHING` is a fancier backlight feature, and uses one of the timers.
+
+`BACKLIGHT_LEVELS` is how many levels exist for your backlight - max is 15, and they are computed automatically from this number.
+
+## `/keyboards/<keyboard>/Makefile`
+
+The values at the top likely won't need to be changed, since most boards use the `atmega32u4` chip. The `BOOTLOADER_SIZE` will need to be adjusted based on your MCU type. It's defaulted to the Teensy, since that's the most common controller. Below is quoted from the `Makefile`.
+
+```
+# Boot Section Size in *bytes*
+#   Teensy halfKay   512
+#   Teensy++ halfKay 1024
+#   Atmel DFU loader 4096
+#   LUFA bootloader  4096
+#   USBaspLoader     2048
+OPT_DEFS += -DBOOTLOADER_SIZE=512
+```
+
+At the bottom of the file, you'll find lots of features to turn on and off - all of these options should be set with `?=` to allow for the keymap overrides. `?=` only assigns if the variable was previously undefined. For the full documenation of these features, see the [Makefile options](#makefile-options).
+
+## `/keyboards/<keyboard>/readme.md`
+
+This is where you'll describe your keyboard - please write as much as you can about it! Talking about default functionality/features is useful here. Feel free to link to external pages/sites if necessary. Images can be included here as well. This file will be rendered into a webpage at qmk.fm/keyboards/<keyboard>/.
+
+## `/keyboards/<keyboard>/<keyboard>.c`
+
+This is where all of the custom logic for your keyboard goes - you may not need to put anything in this file, since a lot of things are configured automatically. All of the `*_kb()` functions are defined here. If you modify them, remember to keep the calls to `*_user()`, or things in the keymaps might not work. You can read more about the functions [here](#custom-quantum-functions-for-keyboards-and-keymaps)
+
+## `/keyboards/<keyboard>/<keyboard>.h`
+
+Here is where you can (optionally) define your `KEYMAP` function to remap your matrix into a more readable format. With ortholinear boards, this isn't always necessary, but it can help to accomodate the dead spots on your matrix, where there are keys that take up more than one space (2u, staggering, 6.25u, etc). The example shows the difference between the physical keys, and the matrix design:
+
+```
+#define KEYMAP( \
+    k00, k01, k02, \
+      k10,  k11   \
+) \
+{ \
+    { k00, k01,   k02 }, \
+    { k10, KC_NO, k11 }, \
+}
+```
+
+Each of the `kxx` variables needs to be unique, and usually follows the format `k<row><col>`. You can place `KC_NO` where your dead keys are in your matrix.
